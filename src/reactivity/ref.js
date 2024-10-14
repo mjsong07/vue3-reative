@@ -1,5 +1,5 @@
-import {  track, trigger } from './effect'
-import { reactive } from './reactive'
+import {  track, trigger } from './effect.js'
+import { reactive } from './reactive.js'
 export function ref(obj) {
     console.log("obj.__isRef",obj.__isRef)
     if(obj.__isRef) { //缓存优化 下次重复传入会忽略
@@ -14,7 +14,7 @@ class RefImpl {
         this._value = chkToRective(obj)
     }
     get value() { 
-        track(this, 'value')  
+        track(this, 'value')
         return this._value
     }
     set value(newVal) {

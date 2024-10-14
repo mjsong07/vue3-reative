@@ -1,8 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { effect } from '../effect'
-import { reactive } from '../reactive'
 import { ref } from '../ref'
-import { computed } from '../computed'
 describe('响应式测试', () => {
   it('ref测试', () => {   
     const ret3 = ref(0)
